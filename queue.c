@@ -1,4 +1,5 @@
 #include "monty.h"
+#include <stdio.h>
 
 /**
 * f_queue - function that prints the top of the queue
