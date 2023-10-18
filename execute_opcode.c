@@ -30,7 +30,7 @@ void execute_opcode(const char *opcode, stack_t **stack,
 	instruction_t instructions[] = {
 		{"push", push_wrapper},
 		{"pall", pall},
-		/* TODO: Other opcode-function pairs. */
+		{"pint", pint},
 		{NULL, NULL}
 	};
 

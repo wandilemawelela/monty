@@ -44,5 +44,6 @@ extern void execute_opcode(const char *opcode,
 extern void push(stack_t **stack,
 		const char *opcode, unsigned int line_number);
 extern void pall(stack_t **stack, unsigned int line_number);
+extern void pint(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H */
