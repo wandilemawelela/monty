@@ -1,11 +1,15 @@
 #include "monty.h"
 
 /**
- * push: Pushes the opcode to the stack. I hope this description
+ * push - Pushes the opcode to the stack. I hope this description
  * is short
  * @stack: Stack structure
  * @value: Value to push to the stack
  * @line_number: Literally a line number
+ *
+ * Description: This function pushes a new node with the given value onto the
+ * stack. If the stack is empty, it creates a new stack. The new
+ * node becomes the head of the stack.
  *
  * Return: Nothing
  *

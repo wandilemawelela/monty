@@ -24,8 +24,8 @@ void push_wrapper(stack_t **stack, unsigned int line_number)
  *
  */
 
-void execute_opcode \
-	     (const char *opcode, stack_t **stack, unsigned int line_number)
+void execute_opcode(const char *opcode, stack_t **stack,
+		unsigned int line_number)
 {
 	instruction_t instructions[] = {
 		{"push", push_wrapper},
