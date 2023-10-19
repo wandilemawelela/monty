@@ -52,5 +52,6 @@ extern void nop(stack_t **stack, unsigned int line_number);
 extern void sub(stack_t **stack, unsigned int line_number);
 extern void div_op(stack_t **stack, unsigned int line_number);
 extern void mul(stack_t **stack, unsigned int line_number);
+extern void mod(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H */
