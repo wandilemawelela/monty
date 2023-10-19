@@ -17,18 +17,21 @@
 
 void push(stack_t **stack, const char *value, unsigned int line_number)
 {
-	int num;
-	stack_t *new_node;
+	char *endptr;
+	int num = strtol(value, &endptr, 10);
+	stack_t *new_node = malloc(sizeof(stack_t));
 
-	if (value == NULL || !isdigit(*value))
+	if (value == NULL || *value == '\0')
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
-	num = atoi(value);
-
-	new_node = malloc(sizeof(stack_t));
+	if (*endptr != '\0')
+	{
+		fprintf(stderr, "L%u: usage: push integer\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 
 	if (new_node == NULL)
 	{
@@ -44,7 +47,6 @@ void push(stack_t **stack, const char *value, unsigned int line_number)
 		(*stack)->prev = new_node;
 		new_node->next = *stack;
 	}
-
 	else
 	{
 		new_node->next = NULL;
