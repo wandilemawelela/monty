@@ -37,6 +37,7 @@ void execute_opcode(const char *opcode, stack_t **stack,
 		{"nop", nop},
 		{"sub", sub},
 		{"div", div_op},
+		{"mul", mul},
 		{NULL, NULL}
 	};
 
