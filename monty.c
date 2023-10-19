@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
 
 	/* If the number of args are matched, open the bytecode file in read-only */
 	file = fopen(argv[1], "r");
+
 	if (file == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
@@ -37,7 +38,7 @@ int main(int argc, char *argv[])
 	{
 		char *opcode = strtok(line, " \t\n");
 
-		if (opcode != NULL && opcode[0] != '#')
+		if (opcode != NULL && opcode[0] != '#' && strcmp(opcode, "") != 0)
 		{
 			execute_opcode(opcode, &stack, line_number);
 		}
