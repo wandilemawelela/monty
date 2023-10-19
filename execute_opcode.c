@@ -35,6 +35,7 @@ void execute_opcode(const char *opcode, stack_t **stack,
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
+		{"sub", sub},
 		{NULL, NULL}
 	};
 
