@@ -2,7 +2,8 @@
 
 /**
  * add - adds the top two elements of the stack.
- *
+ * @stack: Stack structure
+ * @line_number: Literally a line number
  *
  * Return: Nothing
  *
