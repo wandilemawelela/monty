@@ -12,6 +12,7 @@
 void push_wrapper(stack_t **stack, unsigned int line_number)
 {
 	char *arg = strtok(NULL, " \t\n");
+
 	if (arg == NULL)
 	{
 		fprintf(stderr, "L%u: missing argument for push\n", line_number);
